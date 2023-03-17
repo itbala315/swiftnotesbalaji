@@ -1,0 +1,10 @@
+<div class="full-h bg-red-300">
+  <div class="grid grid-cols-3 p-8 gap-8">
+    <app-course-card
+      class="cursor-pointer"
+      *ngFor="let userCourse of service.userCourses$ | async"
+      [course]="userCourse.course"
+    >
+    </app-course-card>
+  </div>
+</div>

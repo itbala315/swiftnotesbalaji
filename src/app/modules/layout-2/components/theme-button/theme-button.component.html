@@ -1,0 +1,37 @@
+<button class="relative focus:outline-none" (click)="toggle()">
+  <div
+    class="
+      w-12
+      h-6
+      transition
+      rounded-full
+      outline-none
+      bg-primary-100
+      dark:bg-primary-lighter
+    "
+  ></div>
+  <div
+    class="
+      absolute
+      top-0
+      left-0
+      inline-flex
+      items-center
+      justify-center
+      w-6
+      h-6
+      transition-all
+      duration-150
+      transform
+      scale-110
+      rounded-full
+      shadow-sm
+      translate-x-6
+      text-primary-100
+      bg-primary-darker
+    "
+  >
+    <mat-icon *ngIf="!isDark">dark_mode</mat-icon>
+    <mat-icon *ngIf="isDark">light_mode</mat-icon>
+  </div>
+</button>

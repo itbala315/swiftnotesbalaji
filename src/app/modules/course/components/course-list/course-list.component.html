@@ -1,0 +1,27 @@
+<!-- <div class="bg-sky-300">
+  <div class="grid grid-cols-3 p-8 gap-8">
+    <app-course-card
+      class="cursor-pointer"
+      *ngFor="let course of service.courses$ | async"
+      [course]="course"
+    ></app-course-card>
+  </div>
+</div> -->
+
+<div class="container">
+  <div
+    class="
+      grid grid-cols-1
+      sm:grid-cols-2
+      md:grid-cols-3
+      lg:grid-cols-4
+      text-center text-4xl
+      p-8
+    "
+  >
+    <app-course-card-2
+      *ngFor="let course of service.courses$ | async"
+      [course]="course"
+    ></app-course-card-2>
+  </div>
+</div>
