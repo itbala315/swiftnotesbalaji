@@ -1,0 +1,20 @@
+<div class="container mx-auto pl-3">
+  <div *ngIf="tasks?.length==0" class="w-1/2 bg-blue-100 border-t border-b border-blue-500 text-blue-700  p-4" role="alert">
+    <p class="font-bold">No Records</p>
+    <p class="text-sm">Please add notes.</p>
+  </div>
+  <h2 class="text-md mt-6 font-semibold text-gray-900 dark:text-night-50" *ngIf="blnShow">All Notes</h2>
+   <div class="flex flex-wrap -mx-4" >
+      <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4 h-full" *ngFor="let task of tasks" >
+      <div class="hover:cursor-pointer c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden" (click)="onEdit(task)">
+      <div class="bg-primary-200 text-gray-700 px-2 py-6 font-bold">
+        {{task.title}}
+      </div>
+      <div class="p-4">
+        <p class="text-sm break-all ...">{{task?.notes | trunc:50 }}</p>
+      </div>
+    </div>
+    </div>
+   </div>
+  </div>
+

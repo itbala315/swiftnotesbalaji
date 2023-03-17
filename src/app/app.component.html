@@ -1,5 +1,6 @@
-<div class="min-h-screen">
-  <app-layout></app-layout>
-  <!-- <app-layout-2></app-layout-2> -->
-  <!-- <app-layout-3></app-layout-3> -->
+<div [ngClass]="{ dark: this.themeService.isDark }">
+  <router-outlet></router-outlet>
+  <app-responsive-helper></app-responsive-helper>
+  
+
 </div>
